@@ -47,24 +47,28 @@ Once your virtual machine is configured you can create it and start setting up S
 After creating your VM you can start and SSH into the VM console to begin configuring Screaming Frog. You'll be using the Ubuntu version of Screaming Frog in headless/command line mode to crawl sites.  You may need the desktop version to set up any custom configurations including content extraction or other crawling rules.
 
 **Install wget**
+
 If your VM does not already have `wget` you can install it using `apt`.  You'll use `wget` to install Screaming Frog and get the crawling shell script.
 ```
 sudo apt-get install wget
 ```
 
 **Download Screaming Frog**
+
 Get the latest Ubuntu version of [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/release-history/) and download it to the virtual machine using `wget` in your `~` user directory.
 ```
 wget -c https://download.screamingfrog.co.uk/products/seo-spider/screamingfrogseospider_16.1_all.deb
 ```
 
 **Install Screaming Frog**
+
 Install Screaming Frog and any dependencies using `apt`
 ```
 sudo apt install ./screamingfrogseospider_16.1_all.deb
 ```
 
 **Add Screaming Frog config and license**
+
 Move to the Screaming Frog config folder and create a new `spider.config` file
 ```
 cd ~/.ScreamingFrogSEOSpider
